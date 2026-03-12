@@ -8,5 +8,5 @@ console.log(backgroundColorBody)
 for (let p of paragrafos) {
     p.style.backgroundColor = backgroundColorBody
     p.style.color = 'white'
-    console.log(p)
+    p.style.fontFamily = 'Arial sans-serif'
 }
