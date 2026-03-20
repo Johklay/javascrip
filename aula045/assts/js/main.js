@@ -1,15 +1,12 @@
 const timer = document.getElementById('timer')
 const iniciar = document.getElementById('iniciar')
+const pausar = document.getElementById('pausar')
+const zerar = document.getElementById('zerar')
 let segundos = 0;
 let intervalo = null;
 
-function time (timer){
-    timer.innerText = "10"
-
-}
-
-
 iniciar.addEventListener('click', function (){
+    console.log('iniciar')
 
     if (intervalo === null){
 
@@ -27,5 +24,19 @@ iniciar.addEventListener('click', function (){
 
 }
 
+});
+
+pausar.addEventListener('click', function(){
+        clearInterval(intervalo);
+        intervalo = null;
+
+});
+
+zerar.addEventListener('click', function(){
+    clearInterval(intervalo);
+    intervalo = null;
+
+    segundos = 0;
+    timer.innerText = '00:00:00';
 });
 
