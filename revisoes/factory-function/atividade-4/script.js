@@ -3,14 +3,20 @@ function criaCarrinho () {
         produtos: [],
 
         addProduto(nome, preco) {
-            this.produtos.push({nome, preco})
+            const produto = this.produtos.find(p => p.nome === nome)
+
+            if (produto) {
+                produto.quantidade ++
+            } else {
+                this.produtos.push({ nome, preco, quantidade: 1})
+            }
         },
 
         total() {
             let total = 0;
 
             for (let produto of this.produtos) {
-                total += produto.preco
+                total += produto.preco * produto.quantidade
             }
 
             return total
@@ -25,8 +31,10 @@ function criaCarrinho () {
 
 const carrinho = criaCarrinho()
 
+
 carrinho.addProduto("Camiseta", 50)
 carrinho.addProduto("Calça", 80)
+carrinho.addProduto("Cueca", 25)
 carrinho.removeProduto ("Camiseta")
 
 console.log(carrinho.produtos)
