@@ -75,7 +75,7 @@ form button:active{
     width: 100%;
     height: 50px;
     font-size: 1em;
-    border: none;
+    border: black solid 1px;
     background: #dfdfdf;
     cursor: pointer;
 }
@@ -90,4 +90,31 @@ form button:active{
 
 .btn-eq:hover{
     background: royalblue;
+}
+
+@media(max-width: 768px) {
+    .container{
+        width: 90%;
+    }
+
+    .btn{
+        font-size: 1.4em;
+        background: rgba(0, 0, 0, 0.788);
+        color: white;
+    }
+
+    .btn-eq{
+    background:  rgb(87, 126, 245);
+}
+
+    .btn-eq:hover{
+    background:  rgb(0, 64, 255);
+}
+    .btn-clear{
+        background: rgba(255, 0, 0, 0.623);
+    }
+
+    .btn-clear:hover{
+        background: red;
+    }
 }
