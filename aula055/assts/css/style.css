@@ -98,10 +98,18 @@ form button:active{
         background-color: rgba(0, 0, 0, 0.638);
     }
 
+    .container{
+        width: 90%;
+    }
+
+    .display{
+        width: 80%;
+    }
+
     .btn{
         font-size: 1.4em;
         background: rgba(0, 0, 0, 0.788);
-        width: 90%;
+        width: 80%;
         color: white;
     }
 
