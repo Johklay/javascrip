@@ -96,6 +96,10 @@ form button:active{
     .container{
         width: 90%;
     }
+    
+    .display{
+        width: 98%;
+    }
 
     .btn{
         font-size: 1.4em;
