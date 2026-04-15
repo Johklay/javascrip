@@ -92,7 +92,7 @@ form button:active{
     background: royalblue;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 600px) {
 
     body{
         background-color: rgba(0, 0, 0, 0.638);
@@ -103,13 +103,13 @@ form button:active{
     }
 
     .display{
-        width: 80%;
+        width: 375px;
     }
 
     .btn{
         font-size: 1.4em;
         background: rgba(0, 0, 0, 0.788);
-        width: 80%;
+        width: 50%;
         color: white;
     }
 
