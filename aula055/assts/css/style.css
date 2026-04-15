@@ -101,7 +101,7 @@ td{
     background: royalblue;
 }
 
-@media(max-width: 600px) {
+@media(max-width: 700px) {
 
     body{
         background-color: rgba(0, 0, 0, 0.638);
