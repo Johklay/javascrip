@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --primary-color: rgb(3, 72, 145)
+    
+}
+
+*{
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+.container{
+    max-width: 640px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form input, label, button{
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+}
+
+form input{
+    font-size: 20px;
+    height: 50px;
+    padding: 0px 20px;
+}
+
+form input:focus{
+    outline: 1px solid var(--primary-color); 
+}
+
+form button{
+    border: none;
+    background-color: rgba(65, 65, 139, 0.441);
+    font-size: 18px;
+    font-weight: 700px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+form button:hover {
+    background-color: rgba(72, 95, 247, 0.547);
+}
+
+form button:active{
+    background-color: rgba(42, 49, 255, 0.914);
+}
+
+.calculadora {
+    width: 100%;
+    table-layout: fixed;;
+}
+
+.display{
+    font-size: 2em;
+    width: 100%;
+    text-align: right;
+}
+
+td{
+    width: 25%;
+}
+
+.btn{
+    width: 100%;
+    height: 50px;
+    font-size: 1em;
+    border: black solid 1px;
+    background: #dfdfdf;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background:#838181 ;
+}
+
+.btn-eq{
+    background:rgba(123, 152, 241, 0.83);
+}
+
+.btn-eq:hover{
+    background: royalblue;
+}
+
+@media(max-width: 480px) {
+
+    body{
+        background: linear-gradient(135deg ,#1e1e1e, #2c2c2c);
+    }
+
+    .container{
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow:0px 10px 30px rgba(0, 0, 0, 0.3) ;
+        
+    }
+
+    .display{
+        width: 100%;
+        height: 50px;
+        font-size: 1.5em;
+        padding: 10px;
+        border:black solid 2px;
+    }
+
+    .btn{
+        font-size: 1.4em;
+        background: rgba(0, 0, 0, 0.788);
+        width: 100%;
+        height: 60px;
+        color: white;
+    }
+
+    .btn-eq{
+    background:  rgb(87, 126, 245);
+}
+
+    .btn-eq:hover{
+    background:  rgb(0, 64, 255);
+}
+    .btn-clear{
+        background: rgba(255, 0, 0, 0.623);
+    }
+
+    .btn-clear:hover{
+        background: red;
+    }
+}
