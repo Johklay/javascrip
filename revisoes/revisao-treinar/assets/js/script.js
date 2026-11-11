@@ -26,14 +26,29 @@ function addTarefa() {
             li.appendChild(buttonApagar);
         }
 
-        marcarTarefa();
         atualizarContadores();
     });
 }
 
 
-
 function marcarTarefa() {
+    const listaTarefas = document.getElementById("lista-tarefas");
+
+    listaTarefas.addEventListener("click", function(event) {
+
+        const tarefa = event.target.closest("li");
+
+        if (tarefa && !event.target.matches("button")) {
+            tarefa.classList.toggle("marcada");
+            atualizarContadores();
+
+        }
+    })
+
+}
+
+
+/*function marcarTarefa() {
     const tarefas = [...document.querySelectorAll("#lista-tarefas li")];
     tarefas.forEach(function(tarefa) {
         tarefa.addEventListener("click", function() {
@@ -42,7 +57,7 @@ function marcarTarefa() {
             atualizarContadores();
         });
     });
-}
+}*/
 
 function atualizarContadores() {
     const tarefasConcluidas = document.querySelector(".tarefas-concluidas h2");
@@ -61,4 +76,5 @@ function atualizarContadores() {
 }
 
 addTarefa();
+marcarTarefa();
 
